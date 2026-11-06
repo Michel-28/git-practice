@@ -44,3 +44,22 @@ addButton.addEventListener("click", () => {
 });
 
 displayStudents();
+
+
+const searchInput = document.getElementById("searchStudent");
+
+searchInput.addEventListener("input", () => {
+    const searchValue = searchInput.value.toLowerCase();
+
+    const filteredStudents = students.filter(student =>
+        student.toLowerCase().includes(searchValue)
+    );
+
+    studentList.innerHTML = "";
+
+    filteredStudents.forEach(student => {
+        const li = document.createElement("li");
+        li.textContent = student;
+        studentList.appendChild(li);
+    });
+});
