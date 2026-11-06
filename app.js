@@ -1,5 +1,5 @@
 
-let students = ["Rahul", "Priya", "Arun", "Karthik"];
+let students = ["Rahul", "Priya", "Arun", "Karthik","pooja"];
 const studentInput = document.getElementById("studentName");
 const addButton = document.getElementById("addStudent");
 const studentList = document.getElementById("studentList");
