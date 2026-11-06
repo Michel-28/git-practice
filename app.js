@@ -1,5 +1,6 @@
 
-let students = ["Rahul", "Priya", "Arun", "Karthik","pooja"];
+let students = ["Rahul", "Priya", "Arun", "Karthik", "Pooja"];
+
 const studentInput = document.getElementById("studentName");
 const addButton = document.getElementById("addStudent");
 const studentList = document.getElementById("studentList");
@@ -8,10 +9,20 @@ const total = document.getElementById("total");
 function displayStudents() {
     studentList.innerHTML = "";
 
-    students.forEach((student) => {
+    students.forEach((student, index) => {
         const li = document.createElement("li");
-        li.textContent = student;
 
+        li.textContent = student + " ";
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+
+        deleteButton.addEventListener("click", () => {
+            students.splice(index, 1);
+            displayStudents();
+        });
+
+        li.appendChild(deleteButton);
         studentList.appendChild(li);
     });
 
@@ -27,7 +38,6 @@ addButton.addEventListener("click", () => {
     }
 
     students.push(name);
-
     studentInput.value = "";
 
     displayStudents();
