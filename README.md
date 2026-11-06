@@ -14,3 +14,10 @@ A simple student management application.
 - HTML
 - CSS
 - JavaScript
+
+
+
+## New Feature
+
+- Student search
+- Student deletion
