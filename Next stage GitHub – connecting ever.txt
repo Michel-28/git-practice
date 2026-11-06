@@ -442,6 +442,14 @@ For a personal project where you're working directly on `main`, you can simply c
 
 
 
+Practise these first:
+1. git add, git commit, git push, git pull
+2. git branch, git switch, git merge
+3. git clone, git remote, git fetch
+4. git restore, git revert, git stash
+5. .gitignore and Pull Requests.
+
+
 
 Links
 
